@@ -76,10 +76,8 @@ export const Container = styled.div`
       border-radius: 6px;
       margin-bottom: 2rem;
       flex: 1 1 200px;
-
-      & + .points-box {
-        margin-left: 1rem;
-      }
+      margin-right: 1rem;
+     
 
       p {
         font-size: 2rem;
