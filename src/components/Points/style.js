@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 6rem auto;
+  padding: 0 6%;
 
   h2 {
     color: #2a477a;
@@ -23,6 +24,7 @@ export const Container = styled.div`
       border: 2px solid #c4c4c4;
       padding: 1rem;
       width: 10rem;
+      margin-bottom: 1rem;
 
       label {
         font-size: 1.3rem;
@@ -37,10 +39,12 @@ export const Container = styled.div`
     font-size: 1.6rem;
     font-weight: bold;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 1rem 0;
 
     span {
+      margin-bottom: 1rem;
       display: inline-block;
     }
   }
@@ -60,7 +64,7 @@ export const Container = styled.div`
   .box-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+  
 
     .points-box {
       padding: 3rem 2rem;
@@ -70,6 +74,12 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       border-radius: 6px;
+      margin-bottom: 2rem;
+      flex: 1 1 200px;
+
+      & + .points-box {
+        margin-left: 1rem;
+      }
 
       p {
         font-size: 2rem;

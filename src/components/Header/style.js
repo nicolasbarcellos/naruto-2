@@ -59,7 +59,7 @@ export const Container = styled.header`
     svg {
       width: 3rem;
       height: 3rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
 
     .up-down {
@@ -70,7 +70,7 @@ export const Container = styled.header`
         width: 1.8rem;
         height: 1.8rem;
         color: var(--azul-light);
-        margin: -.6rem 0;
+        margin: -0.6rem 0;
         margin-right: 1rem;
       }
     }
@@ -80,13 +80,21 @@ export const Container = styled.header`
 export const HeaderBg = styled.div`
   position: relative;
 
+  > img {
+    object-fit: cover;
+    min-height: 50rem;
+  }
+
   .naruto-img {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 50rem;
-    width: 50rem;
-  }
+    max-height: 50rem;
+    /* height: 100%; */
 
-`
+    @media(max-width: 1000px) {
+      top: 70%;
+    }
+  }
+`;

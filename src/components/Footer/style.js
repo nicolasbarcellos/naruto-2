@@ -7,6 +7,7 @@ export const Container = styled.footer`
   justify-content: center;
   text-align: center;
   padding-top: 6rem;
+ 
   font-family: "Lexend", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -56,18 +57,28 @@ export const Container = styled.footer`
 }
 
 .subFooter {
+  max-width: 100%;
   background: #000;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  justify-content: center;
+  padding: 2rem 6%;
 }
 
 .footerMenu {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 1rem 6%;
+
+  @media(max-width: 466px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footerMenu li {
@@ -84,6 +95,16 @@ export const Container = styled.footer`
   margin-left: 1rem;
   height: 24px;
   background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+
+  @media(max-width: 466px) {
+    display: block;
+    position: absolute;
+    margin-top: 3rem;
+    height: 2px;
+    width: 80%;
+    ;
+  }
 }
 
 .subFooter .footerFlags img {

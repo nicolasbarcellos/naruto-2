@@ -34,6 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    width: 100vw;
+    overflow-x: hidden;
     font-size: 62.50%;
 
     @media (max-width: 1080px) {
@@ -65,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--background);
     -webkit-font-smoothing: antialiased;
     font-family: 'Trebuchet MS';
+    overflow-x: hidden
   }
 
   button {

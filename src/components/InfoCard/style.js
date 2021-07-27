@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 96rem;
+  padding: 0 6%;
   margin: 0 auto;
   margin-bottom: 8rem;
 
@@ -13,6 +14,7 @@ export const Container = styled.div`
     margin: 0 auto;
     margin-top: 2rem;
     max-width: 860px;
+    
 
     .card-top {
       display: grid;
@@ -20,6 +22,12 @@ export const Container = styled.div`
       justify-items: center;
       text-align: center;
       padding: 1rem 0;
+
+
+      @media(max-width: 720px) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
 
       .level {
         color: var(--background);
@@ -49,7 +57,14 @@ export const Container = styled.div`
       .specs {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        justify-content: space-between;
+        gap: 1rem;
+
+        @media(max-width: 720px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
         > div {
           display: flex;
@@ -97,6 +112,10 @@ export const Container = styled.div`
       position: relative;
       z-index: 2;
 
+      @media(max-width: 524px) {
+        width: 80vw;
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -113,17 +132,27 @@ export const Container = styled.div`
     border-top: 1px solid #fff;
     background: #07152c;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-evenly;
     color: #fff;
     padding: 1rem 0;
 
+    @media(max-width: 510px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     div {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
 
       span {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         font-size: 2rem;
         gap: .5rem;
