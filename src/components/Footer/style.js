@@ -98,12 +98,7 @@ export const Container = styled.footer`
   position: relative;
 
   @media(max-width: 466px) {
-    display: block;
-    position: absolute;
-    margin-top: 3rem;
-    height: 2px;
-    width: 80%;
-    ;
+    display: none;
   }
 }
 
