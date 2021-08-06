@@ -210,8 +210,8 @@ export function Points() {
       <button>Entrar no Clã</button>
 
       <Swiper
-        slidesPerView={3}
-        breakpoints={{ 320: { slidesPerView: 6 } }}
+        slidesPerView={2}
+        breakpoints={{ 640: { width: 640, slidesPerView: 2} }}
         navigation
       >
         <div className="box-wrapper">

@@ -132,15 +132,5 @@ export const Container = styled.div`
   }
 
 
-  @media screen and (max-width: 640px) {
-    .swiper-container {
-      width: 640px;
-    }
-  }
 
-  @media screen and (max-width: 768px) {
-    .swiper-container {
-      width: 768px;
-    }
-  }
 `;
