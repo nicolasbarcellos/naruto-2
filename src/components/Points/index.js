@@ -15,8 +15,27 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
+import { useEffect, useState } from "react";
 
 export function Points() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  function getWindowDimensions() {
+    const { innerWidth: width } = window;
+    return width;
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+
   return (
     <Container>
       <h2>Personalize os atributos do seu Clã</h2>
@@ -210,8 +229,7 @@ export function Points() {
       <button>Entrar no Clã</button>
 
       <Swiper
-        slidesPerView={2}
-        breakpoints={{ 640: { width: 640, slidesPerView: 2} }}
+        slidesPerView={`${windowWidth <= 460 ? 1 : 2}`}
         navigation
       >
         <div className="box-wrapper">

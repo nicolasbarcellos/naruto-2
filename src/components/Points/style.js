@@ -131,6 +131,16 @@ export const Container = styled.div`
     }
   }
 
+  /* .swiper-slide {
+    @media(max-width: 460px) {
+      width: 80% !important;
+    }
+  }
 
+  .swiper-container {
+    @media(max-width: 460px) {
+      width: 80% !important;
+    }
+  } */
 
 `;
