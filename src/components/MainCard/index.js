@@ -25,7 +25,11 @@ export default function MainCard() {
       <main className="card-wrapper">
         <h3 style={{ marginBottom: "3rem" }}>Escolha seu clã</h3>
 
-        <Swiper slidesPerView={3}  navigation>
+        <Swiper
+          slidesPerView={2}
+          breakpoints={{ 640: { width: 640, slidesPerView: 2 } }}
+          navigation
+        >
           <SwiperSlide>
             <img className="card-active" src={card2img} alt="" />
           </SwiperSlide>

@@ -166,7 +166,7 @@ export const MenuMobile = styled.div`
     opacity: 0;
     border-right: 2px solid #F3A75A;
     overflow-y: scroll;
-    /* overflow: hidden; */
+    -webkit-overflow-scrolling: scroll;
 
     transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -210,7 +210,7 @@ export const MenuMobile = styled.div`
 
         svg {
           position: absolute;
-          margin-left: 1rem;
+          margin-left: 2rem;
         }
 
 
@@ -219,7 +219,7 @@ export const MenuMobile = styled.div`
           width: 100%;
           border: 0;
           background: var(--azul);
-          padding: 2rem 0rem 2rem 5rem;
+          padding: 2rem 0rem 2rem 6rem;
           outline: none;
 
           &::placeholder {

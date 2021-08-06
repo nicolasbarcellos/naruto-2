@@ -12,7 +12,7 @@ import { AiOutlinePoweroff } from "react-icons/ai";
 import { useState } from "react";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
