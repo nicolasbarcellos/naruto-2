@@ -15,8 +15,7 @@ export const Container = styled.div`
     margin-top: 2rem;
     gap: 1rem;
     display: flex;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
 
     justify-content: space-between;
 
@@ -67,69 +66,81 @@ export const Container = styled.div`
   .box-wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
+  .points-box {
+    padding: 3rem 2rem;
+    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.3),
+      inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    flex: 1 1 200px;
+    margin-right: 1rem;
 
-    .points-box {
-      padding: 3rem 2rem;
-      box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.3),
-        inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-      flex: 1 1 200px;
-      margin-right: 1rem;
+    p {
+      font-size: 2rem;
+      color: #fc984b;
+      font-weight: 600;
+      margin: 2rem 0;
+    }
 
-      p {
+    div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      justify-items: center;
+
+      span {
+        display: inline-block;
+        color: #89ab9e;
         font-size: 2rem;
-        color: #fc984b;
-        font-weight: 600;
-        margin: 2rem 0;
+        font-weight: bold;
       }
 
       div {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 1rem;
-        justify-items: center;
-
-        span {
-          display: inline-block;
-          color: #89ab9e;
-          font-size: 2rem;
-          font-weight: bold;
-        }
-
-        div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-        }
       }
-      .text-box {
-        text-align: center;
-        h3 {
-          color: #89ab9e;
-          line-height: 3rem;
-          font-weight: 400;
-          font-size: 2rem;
-        }
-
-        &::before {
-          content: "";
-          display: block;
-          width: 90%;
-          background: #626262;
-          font-weight: bold;
-          margin: 2rem auto;
-          height: 0.1rem;
-        }
-
-        button {
-          margin: 2rem auto 0 auto;
-        }
+    }
+    .text-box {
+      text-align: center;
+      h3 {
+        color: #89ab9e;
+        line-height: 3rem;
+        font-weight: 400;
+        font-size: 2rem;
       }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 90%;
+        background: #626262;
+        font-weight: bold;
+        margin: 2rem auto;
+        height: 0.1rem;
+      }
+
+      button {
+        margin: 2rem auto 0 auto;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 640px) {
+    .swiper-container {
+      width: 640px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-container {
+      width: 768px;
     }
   }
 `;

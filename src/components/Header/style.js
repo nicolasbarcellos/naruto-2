@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background: var(--azul-medium);
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 23, 71, 0.8);
   color: var(--text-menu);
   min-height: 67px;
   padding: 1rem 3rem;
@@ -17,7 +22,9 @@ export const Container = styled.header`
   ul {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
 
     @media (max-width: 1280px) {
       display: none;
@@ -143,11 +150,11 @@ export const MenuMobile = styled.div`
     height: 100vh;
     max-width: 360px;
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       max-width: 300px;
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       max-width: 80vw;
     }
 
@@ -164,7 +171,7 @@ export const MenuMobile = styled.div`
     transform: translateX(-100%);
     visibility: hidden;
     opacity: 0;
-    border-right: 2px solid #F3A75A;
+    border-right: 2px solid #f3a75a;
     overflow-y: scroll;
     -webkit-overflow-scrolling: scroll;
 
@@ -206,13 +213,11 @@ export const MenuMobile = styled.div`
         display: flex;
         align-items: center;
         position: relative;
-      
 
         svg {
           position: absolute;
           margin-left: 2rem;
         }
-
 
         input {
           color: #fff;

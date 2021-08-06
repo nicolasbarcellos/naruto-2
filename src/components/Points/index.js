@@ -8,6 +8,14 @@ import convImg from "../../assets/conv.png";
 import targetImg from "../../assets/target2.png";
 import agiImg from "../../assets/agi.png";
 
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+
 export function Points() {
   return (
     <Container>
@@ -194,194 +202,218 @@ export function Points() {
           </select>
         </div>
       </div>
+
       <div className="points">
         <span style={{ color: "#d37d8d" }}>7 pontos disponíveis</span>
         <span style={{ color: "#ffb083" }}>7 pontos disponíveis</span>
       </div>
       <button>Entrar no Clã</button>
 
-      <div className="box-wrapper">
-        <div className="points-box" style={{background: '#fff6cc', boxShadow: '1px 1px 15px 0 rgba(0, 0, 0, 0.3) inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3)'}}>
-          <img src={shariganImg} alt="sharigan" />
-          <p>Sharigan Nível 1</p>
-          <div className="icons-wrapper">
-            <div>
-              <span>+3</span>
-              <img src={genImg} alt="" />
+      <Swiper
+        slidesPerView={3}
+        breakpoints={{ 320: { slidesPerView: 6 } }}
+        navigation
+      >
+        <div className="box-wrapper">
+          <SwiperSlide>
+            <div
+              className="points-box"
+              style={{
+                background: "#fff6cc",
+                boxShadow:
+                  "1px 1px 15px 0 rgba(0, 0, 0, 0.3) inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              <img src={shariganImg} alt="sharigan" />
+              <p>Sharigan Nível 1</p>
+              <div className="icons-wrapper">
+                <div>
+                  <span>+3</span>
+                  <img src={genImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={targetImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={agiImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={convImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={inteImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={conheImg} alt="" />
+                </div>
+              </div>
+              <footer className="text-box">
+                <h3>Ser Genin</h3>
+                <h3>Ser Level 5 ou maior</h3>
+                <h3>Ser do Cla Uchiha</h3>
+                <button>Treinar</button>
+              </footer>
             </div>
-            <div>
-              <span>+3</span>
-              <img src={targetImg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="points-box">
+              <img src={shariganImg} alt="sharigan" />
+              <p>Sharigan Nível 1</p>
+              <div className="icons-wrapper">
+                <div>
+                  <span>+3</span>
+                  <img src={genImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={targetImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={agiImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={convImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={inteImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={conheImg} alt="" />
+                </div>
+              </div>
+              <footer className="text-box">
+                <h3>Ser Genin</h3>
+                <h3>Ser Level 5 ou maior</h3>
+                <h3 style={{ color: "#FF7D7D" }}>Ser do Cla Uchiha</h3>
+                <button>Treinar</button>
+              </footer>
             </div>
-            <div>
-              <span>+3</span>
-              <img src={agiImg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="points-box">
+              <img src={shariganImg} alt="sharigan" />
+              <p>Sharigan Nível 1</p>
+              <div className="icons-wrapper">
+                <div>
+                  <span>+3</span>
+                  <img src={genImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={targetImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={agiImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={convImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={inteImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={conheImg} alt="" />
+                </div>
+              </div>
+              <footer className="text-box">
+                <h3>Ser Genin</h3>
+                <h3>Ser Level 5 ou maior</h3>
+                <h3 style={{ color: "#FF7D7D" }}>Ser do Cla Uchiha</h3>
+                <button>Treinar</button>
+              </footer>
             </div>
-            <div>
-              <span>+3</span>
-              <img src={convImg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="points-box">
+              <img src={shariganImg} alt="sharigan" />
+              <p>Sharigan Nível 1</p>
+              <div className="icons-wrapper">
+                <div>
+                  <span>+3</span>
+                  <img src={genImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={targetImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={agiImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={convImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={inteImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={conheImg} alt="" />
+                </div>
+              </div>
+              <footer className="text-box">
+                <h3>Ser Genin</h3>
+                <h3>Ser Level 5 ou maior</h3>
+                <h3 style={{ color: "#FF7D7D" }}>Ser do Cla Uchiha</h3>
+                <button>Treinar</button>
+              </footer>
             </div>
-            <div>
-              <span>+3</span>
-              <img src={inteImg} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="points-box">
+              <img src={shariganImg} alt="sharigan" />
+              <p>Sharigan Nível 1</p>
+              <div className="icons-wrapper">
+                <div>
+                  <span>+3</span>
+                  <img src={genImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={targetImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={agiImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={convImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={inteImg} alt="" />
+                </div>
+                <div>
+                  <span>+3</span>
+                  <img src={conheImg} alt="" />
+                </div>
+              </div>
+              <footer className="text-box">
+                <h3>Ser Genin</h3>
+                <h3>Ser Level 5 ou maior</h3>
+                <h3 style={{ color: "#FF7D7D" }}>Ser do Cla Uchiha</h3>
+                <button>Treinar</button>
+              </footer>
             </div>
-            <div>
-              <span>+3</span>
-              <img src={conheImg} alt="" />
-            </div>
-          </div>
-          <footer className="text-box">
-            <h3>Ser Genin</h3>
-            <h3>Ser Level 5 ou maior</h3>
-            <h3>Ser do Cla Uchiha</h3>
-            <button>Treinar</button>
-          </footer>
+          </SwiperSlide>
         </div>
-        <div className="points-box">
-          <img src={shariganImg} alt="sharigan" />
-          <p>Sharigan Nível 1</p>
-          <div className="icons-wrapper">
-            <div>
-              <span>+3</span>
-              <img src={genImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={targetImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={agiImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={convImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={inteImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={conheImg} alt="" />
-            </div>
-          </div>
-          <footer className="text-box">
-            <h3>Ser Genin</h3>
-            <h3>Ser Level 5 ou maior</h3>
-            <h3 style={{color: '#FF7D7D'}}>Ser do Cla Uchiha</h3>
-            <button>Treinar</button>
-          </footer>
-        </div>
-        <div className="points-box">
-          <img src={shariganImg} alt="sharigan" />
-          <p>Sharigan Nível 1</p>
-          <div className="icons-wrapper">
-            <div>
-              <span>+3</span>
-              <img src={genImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={targetImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={agiImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={convImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={inteImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={conheImg} alt="" />
-            </div>
-          </div>
-          <footer className="text-box">
-            <h3>Ser Genin</h3>
-            <h3>Ser Level 5 ou maior</h3>
-            <h3 style={{color: '#FF7D7D'}}>Ser do Cla Uchiha</h3>
-            <button>Treinar</button>
-          </footer>
-        </div>
-        <div className="points-box">
-          <img src={shariganImg} alt="sharigan" />
-          <p>Sharigan Nível 1</p>
-          <div className="icons-wrapper">
-            <div>
-              <span>+3</span>
-              <img src={genImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={targetImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={agiImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={convImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={inteImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={conheImg} alt="" />
-            </div>
-          </div>
-          <footer className="text-box">
-            <h3>Ser Genin</h3>
-            <h3>Ser Level 5 ou maior</h3>
-            <h3 style={{color: '#FF7D7D'}}>Ser do Cla Uchiha</h3>
-            <button>Treinar</button>
-          </footer>
-        </div>
-        <div className="points-box">
-          <img src={shariganImg} alt="sharigan" />
-          <p>Sharigan Nível 1</p>
-          <div className="icons-wrapper">
-            <div>
-              <span>+3</span>
-              <img src={genImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={targetImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={agiImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={convImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={inteImg} alt="" />
-            </div>
-            <div>
-              <span>+3</span>
-              <img src={conheImg} alt="" />
-            </div>
-          </div>
-          <footer className="text-box">
-            <h3>Ser Genin</h3>
-            <h3>Ser Level 5 ou maior</h3>
-            <h3 style={{color: '#FF7D7D'}}>Ser do Cla Uchiha</h3>
-            <button>Treinar</button>
-          </footer>
-        </div>
-      </div>
+      </Swiper>
     </Container>
   );
 }
