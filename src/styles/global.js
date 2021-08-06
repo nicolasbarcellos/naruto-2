@@ -10,11 +10,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-  font-family: 'GT America';
+  font-family: 'GT America', sans-serif;
   src: url(../fonts/GTAmericaBold.ttf);
 }
-
-
 
 
   :root {

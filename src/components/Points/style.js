@@ -13,8 +13,11 @@ export const Container = styled.div`
 
   .specs {
     margin-top: 2rem;
+    gap: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
     justify-content: space-between;
 
     > div {
@@ -64,7 +67,6 @@ export const Container = styled.div`
   .box-wrapper {
     display: flex;
     flex-wrap: wrap;
-  
 
     .points-box {
       padding: 3rem 2rem;
@@ -77,7 +79,6 @@ export const Container = styled.div`
       margin-bottom: 2rem;
       flex: 1 1 200px;
       margin-right: 1rem;
-     
 
       p {
         font-size: 2rem;
