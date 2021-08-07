@@ -18,12 +18,14 @@ import "swiper/components/scrollbar/scrollbar.scss";
 import { useEffect, useState } from "react";
 
 export function Points() {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(1900);
 
   function getWindowDimensions() {
     const { innerWidth: width } = window;
     return width;
   }
+
+
 
   useEffect(() => {
     function handleResize() {
@@ -229,7 +231,7 @@ export function Points() {
       <button>Entrar no Clã</button>
 
       <Swiper
-        slidesPerView={`${windowWidth <= 460 ? 1 : 2}`}
+        slidesPerView={`${windowWidth <= 460 ? 1 : 3}`}
         navigation
       >
         <div className="box-wrapper">

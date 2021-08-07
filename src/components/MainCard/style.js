@@ -103,7 +103,7 @@ export const Container = styled.section`
 
   .swiper-slide {
     /* display: flex; */
-    margin-right: -40px;
+    /* margin-right: -0px; */
 
     @media(max-width: 1200px) {
       margin-right: -30px;
@@ -115,7 +115,7 @@ export const Container = styled.section`
     }
     
     img {
-      width: 40rem;
+      width: 20rem;
       /* height: 25rem; */
     }
     

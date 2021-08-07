@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   top: 0;
   left: 0;
   right: 0;
@@ -37,6 +37,10 @@ export const Container = styled.header`
     li {
       display: flex;
       margin-right: 1rem;
+      padding: 1rem 0;
+      position: relative;
+
+      
 
       span {
         color: var(--azul-light);
@@ -146,7 +150,7 @@ export const MenuMobile = styled.div`
 
   .panel {
     position: fixed;
-    z-index: 3;
+    z-index: 8;
     height: 100vh;
     max-width: 360px;
 
@@ -250,4 +254,18 @@ export const MenuMobile = styled.div`
       }
     }
   }
+`;
+
+export const DropdownWrapper = styled.ul`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  /* padding: 1.5rem 1rem; */
+  width: 130%;
+  color: #000;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+ 
 `;

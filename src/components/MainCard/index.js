@@ -12,10 +12,31 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
+import { useEffect, useState } from "react";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export default function MainCard() {
+  const [windowWidth, setWindowWidth] = useState(1900);
+
+  function getWindowDimensions() {
+    const { innerWidth: width } = window;
+    return width;
+  }
+
+ 
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+
   return (
     <Container>
       <div className="b-top">
@@ -26,8 +47,7 @@ export default function MainCard() {
         <h3 style={{ marginBottom: "3rem" }}>Escolha seu clã</h3>
 
         <Swiper
-          slidesPerView={2}
-          breakpoints={{ 640: { width: 640, slidesPerView: 2 } }}
+          slidesPerView={windowWidth <= 500 ? 2 : windowWidth <= 920 ? 3 : 5}
           navigation
         >
           <SwiperSlide>
