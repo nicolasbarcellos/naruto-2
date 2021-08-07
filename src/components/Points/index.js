@@ -231,7 +231,7 @@ export function Points() {
       <button>Entrar no Clã</button>
 
       <Swiper
-        slidesPerView={`${windowWidth <= 460 ? 1 : 4}`}
+        slidesPerView={`${windowWidth <=460 ? 1 : windowWidth <= 780 ? 2 : 4}`}
         navigation
       >
         <div className="box-wrapper">
