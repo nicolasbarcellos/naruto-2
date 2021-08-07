@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Container, HeaderBg, MenuMobile, DropdownWrapper } from "./style";
 
 import logoImg from "../../assets/logo.png";
@@ -10,6 +12,7 @@ import { IoMoon, IoClose, IoSearchSharp } from "react-icons/io5";
 import { BiWorld } from "react-icons/bi";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import { useState } from "react";
+import Accordion from "react-bootstrap/Accordion";
 
 function DropwDown() {
   return (
@@ -20,7 +23,6 @@ function DropwDown() {
     </DropdownWrapper>
   );
 }
-
 
 export function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,10 +102,10 @@ export function Header(props) {
   }
 
   function mobileDropdown() {
-    console.log('a');
+    console.log("a");
   }
-  
-  props.onHandleOpen(isOpen); 
+
+  props.onHandleOpen(isOpen);
 
   return (
     <>
@@ -134,15 +136,80 @@ export function Header(props) {
                 </form>
 
                 <ul className="menuMobileNav">
-                  <li onClick={mobileDropdown}>Usuário</li>
-                  <li>Personagem</li>
-                  <li>Academia</li>
-                  <li>Sensei</li>
-                  <li>Vila Atual</li>
-                  <li>Combate</li>
-                  <li>Equipe</li>
-                  <li>Organização</li>
-                  <li>Ranking</li>
+                  <Accordion defaultActiveKey="0">
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Usuário</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                      <Accordion.Header>Personagem</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                      <Accordion.Header>Academia</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                      <Accordion.Header>Sensei</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="4">
+                      <Accordion.Header>Vila Atual</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="5">
+                      <Accordion.Header>Combate</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="6">
+                      <Accordion.Header>Equipe</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="7">
+                      <Accordion.Header>Organização</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="8">
+                      <Accordion.Header>Ranking</Accordion.Header>
+                      <Accordion.Body>
+                        <li>Menu 1</li>
+                        <li>Menu 2</li>
+                        <li>Menu 3</li>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
                 </ul>
               </div>
             </div>

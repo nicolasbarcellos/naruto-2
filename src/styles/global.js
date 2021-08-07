@@ -58,13 +58,21 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
+
+  dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+  ol, ul {
+    padding-left: 0rem;
+}
 
   body {
     background: var(--background);
     -webkit-font-smoothing: antialiased;
-    font-family: 'Trebuchet MS';
+    font-family: 'Trebuchet MS', sans-serif !important;
     overflow-x: hidden
   }
 
@@ -74,7 +82,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 600;
+    font-weight: 600 !important;
   }
 
   button {

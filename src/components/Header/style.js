@@ -99,6 +99,17 @@ export const Container = styled.header`
       }
     }
   }
+
+  .accordion-button {
+  background: #f3a75a
+}
+
+.accordion-header {
+  button {
+    font-size: 2rem;
+  }
+ 
+}
 `;
 
 export const HeaderBg = styled.div`
